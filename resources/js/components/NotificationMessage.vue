@@ -33,7 +33,7 @@
     ],
     filters: {
       fromNow (date) {
-        return new moment.locale('it').tz(date.date, 'YYYY-MM-DD HH:mm:ss', date.timezone).local().fromNow()
+        return new moment.tz(date.date, 'YYYY-MM-DD HH:mm:ss', date.timezone).local().fromNow()
       }
     },
     methods: {
