@@ -33,8 +33,6 @@
     ],
     filters: {
       fromNow (date) {
-        var m = new moment.locale('it')
-        console.log(m.locale());
         return new moment.tz(date.date, 'YYYY-MM-DD HH:mm:ss', date.timezone).local().fromNow()
       }
     },
