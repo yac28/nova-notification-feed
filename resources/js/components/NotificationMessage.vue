@@ -19,7 +19,7 @@
         </span>
       <div class="table-cell w-full py-4 pl-4">
         <p>{{ notification.data.message }}</p>
-        <span class="text-sm text-70">{{ notification.created_at | fromNow }}</span>
+        <!--<span class="text-sm text-70">{{ notification.created_at | fromNow }}</span>-->
       </div>
     </div>
   </div>
@@ -33,8 +33,8 @@
     ],
     filters: {
       fromNow (date) {
-        var moment = require('moment');
-        return moment.tz(date.date, 'YYYY-MM-DD HH:mm:ss', date.timezone).local().fromNow()
+        //var moment = require('moment');
+        return new moment.tz(date.date, 'YYYY-MM-DD HH:mm:ss', date.timezone).local().fromNow()
       }
     },
     methods: {
